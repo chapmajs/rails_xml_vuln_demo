@@ -1,1 +1,2 @@
-rvm --create use ruby-1.9.3@vulnerable
+export JRUBY_OPTS="--1.9"
+rvm --create use jruby-1.6.6@vulnerable
