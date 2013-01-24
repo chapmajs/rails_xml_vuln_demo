@@ -6,12 +6,12 @@ This project was used along with a recent install of Metasploit to demonstrate t
 MRI 1.9.3 / Rails 3.2.10
 ------------------------
 
-A `git checkout 79e452a8` will get you a brand-new empty Rails project ready to run. After setting up your RVM environment, do a `bundle install` and `rails s` to bring up the project in a ready-to-be-exploited state.
+A `git checkout mri_1.9.3/rails_3.2.10` will get you a brand-new empty Rails project ready to run. After setting up your RVM environment, do a `bundle install` and `rails s` to bring up the project in a ready-to-be-exploited state.
 
 JRuby 1.6.6 / Rails 3.2.10
 --------------------------
 
-A `git checkout 5eb825c2` will switch the Ruby to JRuby 1.6.6. The Rails version remains the same, but the SQLite3 adapter has to be changed to provide JRuby with a JDBC connection. Do a `bundle install` and `rails s` again to bring the application up. While Rails 3.2.10 is still vulnerable, you will find that the default shellcode included with Metasploit will get injected, but will not properly drop shell for you. **THIS IS NOT A SECURE OPTION TO UPGRADING RAILS!** At best, running with a vulnerable version of Rails with XML params enabled under JRuby is security through obscurity...which isn't security.
+A `git checkout jruby/rails_3.2.10` will switch the Ruby to JRuby 1.6.6. The Rails version remains the same, but the SQLite3 adapter has to be changed to provide JRuby with a JDBC connection. Do a `bundle install` and `rails s` again to bring the application up. While Rails 3.2.10 is still vulnerable, you will find that the default shellcode included with Metasploit will get injected, but will not properly drop shell for you. **THIS IS NOT A SECURE OPTION TO UPGRADING RAILS!** At best, running with a vulnerable version of Rails with XML params enabled under JRuby is security through obscurity...which isn't security.
 
 MRI 1.9.3 / Rails 3.2.11
 ------------------------
